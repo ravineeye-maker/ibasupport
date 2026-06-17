@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBA 리더스 포럼 후원요청 이메일</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        body, p, h1, h2, h3, ul, ol, table, td {
+            margin: 0;
+            padding: 0;
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            padding: 40px 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        .email-container {
+            max-width: 630px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* 상단 메인 배너 */
+        .header-banner {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 50px 40px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .header-banner .badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .header-banner h1 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.5px;
+        }
+        
+        /* 말씀 카드 섹션 */
+        .verse-box {
+            background-color: #f8fafc;
+            border-left: 4px solid #2a5298;
+            margin: 40px;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+        .verse-text {
+            font-size: 15px;
+            color: #334155;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .verse-ref {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* 본문 콘텐츠 섹션 */
+        .content-body {
+            padding: 0 40px 40px 40px;
+            color: #334155;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .content-body p {
+            margin-bottom: 20px;
+        }
+        .highlight-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e3c72;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        
+        /* 후원 안내 카드 레이아웃 */
+        .sponsor-grid {
+            margin: 30px 0;
+        }
+        .sponsor-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+        .sponsor-card.primary {
+            border-left: 5px solid #2a5298;
+        }
+        .sponsor-card.secondary {
+            border-left: 5px solid #0284c7;
+        }
+        .card-header {
+            margin-bottom: 12px;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            display: inline-block;
+        }
+        .card-amount {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2a5298;
+            float: right;
+        }
+        .sponsor-card.secondary .card-amount {
+            color: #0284c7;
+        }
+        .card-desc {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.5;
+            clear: both;
+            padding-top: 5px;
+        }
+
+        /* 안내 사항 및 계좌 박스 */
+        .info-box {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #475569;
+        }
+        .info-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .info-box li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+        .info-box li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        .account-details {
+            background-color: #ffffff;
+            border: 1px dashed #cbd5e1;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-weight: 600;
+            color: #1e293b;
+            text-align: center;
+        }
+
+        /* 버튼 영역 */
+        .btn-container {
+            text-align: center;
+            margin: 40px 0 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .btn-primary {
+            background-color: #2a5298;
+            color: #ffffff;
+        }
+        .btn-secondary {
+            background-color: #0284c7;
+            color: #ffffff;
+        }
+
+        /* 하단 푸터 */
+        .footer {
+            background-color: #1e293b;
+            padding: 35px 40px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 12px;
+            line-height: 1.8;
+            border-top: 1px solid #334155;
+        }
+        .footer a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="email-container">
+        <div class="header-banner">
+            <span class="badge">20th IBA LEADERS FORUM</span>
+            <h1>상생과 연대<br>BAM, 우정의 생태계를 만들다</h1>
+        </div>
+
+        <div class="verse-box">
+            <div class="verse-text">"한 사람이면 패하겠거니와 두 사람이면 맞설 수 있나니 세 겹 줄은 쉽게 끊어지지 아니하느니라"</div>
+            <div class="verse-ref">전도서 4:12</div>
+        </div>
+
+        <div class="content-body">
+                        <p>비즈니스 세계 속에 하나님 나라 운동이 일어나기 위해 연합하는 IBA(International BAM Alliance)입니다. 늘 각자의 자리에서 선교적 삶을 치열하게 살아내심에 깊은 감사를 드립니다.</p>
+            <p>올해 개최되는 <strong>2026 IBA 리더스 포럼</strong>은 그동안 달려온 BAM Movement의 과거와 현재를 엄밀히 돌아보고, 앞으로 나아갈 시대적 방향을 새롭게 재설정하는 전환점이 될 것입니다.</p>
+
+            <div class="highlight-title">💡 미래를 향한 연결고리: 30-40 청년 사업가</div>
+            <p>이번 포럼에서 저희는 <strong>30대와 40대의 청년 사업가들을 포럼에 초대하여, BAM 운동의 다음 세대 주역으로 세우고 미래의 BAM 생태계를 만들어가며 현 세대와 견고한 연결고리를 만드는 일</strong>을 하려 합니다.</p>
+            <p>기성 세대의 지혜와 청년 세대의 역동성이 만날 때, BAM 운동은 끊어지지 않고 지속될 수 있습니다. 그러나 현장의 많은 청년 사업가들이 재정적 부담으로 인해 참여를 망설이고 있는 것이 현실입니다. 이에 동역자님의 따뜻한 손길을 요청드립니다.</p>
+
+            <div class="highlight-title">🤝 후원 안내 및 동역 방법</div>
+            
+            <div class="sponsor-grid">
+                <div class="sponsor-card primary">
+                    <div class="card-header">
+                        <span class="card-title">포럼 전체 후원</span>
+                        <span class="card-amount">1,000,000원 ~</span>
+                    </div>
+                    <div class="card-desc">포럼의 전반적인 진행 및 BAM Movement의 시대적 방향성을 재설정하는 연구 및 기획 과정을 전폭적으로 지원합니다.</div>
+                </div>
+                
+                <div class="sponsor-card secondary">
+                    <div class="card-header">
+                        <span class="card-title">30-40 청년 사업가 후원</span>
+                        <span class="card-amount">150,000원 ~</span>
+                    </div>
+                    <div class="card-desc"><strong>[1구좌당 청년 사업가 1인]</strong>의 포럼 등록 회비 50%를 직접 매칭 지원하여, 다음 세대 리더들이 부담 없이 참여할 수 있는 통로를 엽니다.</div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <ul>
+                    <li>모든 후원금은 후원자(또는 기업/교회명)의 이름으로 포럼 운영 및 청년 사업가들에게 전액 투명하게 사용됩니다.</li>
+                    </li>
+                    <li>기부금 영수증 발행이 필요하신 경우 사무국으로 연락 주시면 상세히 안내해 드리겠습니다.</li>
+                </ul>
+                <div class="account-details">
+                    후원계좌: 국민은행 830501-04-109237 (예금주: IBA)
+                </div>
+            </div>
+
+            <div class="btn-container">
+                <a href="https://go.missionfund.org/iba" class="btn btn-secondary" target="_blank">IBA 후원하기 👨‍💻</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>IBA (International BAM Alliance)</p>
+            <p>주소: 천안시 서북구 입장면 영산홍3길 17-5 | 문의: 010-3323-9314 | 이메일: iba4world@naver.com</p>
+            <p style="margin-top: 15px; color: #64748b;">본 메일은 수신동의를 하신 분들을 대상으로 발송되는 발신전용 메일입니다. <a href="#" style="color:#64748b; text-decoration:underline;">수신거부</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
